@@ -34,15 +34,15 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install dependencies  
         run: dotnet restore  
+        working-directory: ./MyApiClient 
       - name: Build  
         run: dotnet build --configuration Release --no-restore  
-      - name: Test  
-        run: dotnet test --no-restore --verbosity normal  
+        working-directory: ./MyApiClient 
       
       # Publish to Nuget
         
       - name: Publish  
         uses: brandedoutcast/publish-nuget@v2.5.2  
         with:   
-          PROJECT_FILE_PATH: MyApiClient/TestAspNetCore/TestAspNetCore.sln 
+          PROJECT_FILE_PATH: TestAspNetCore/TestAspNetCore.sln 
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
