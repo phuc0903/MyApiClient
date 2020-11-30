@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Tamara.Net.SDK.Consumer;
 namespace TestAspNetCore
 {
     public class Program
