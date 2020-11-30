@@ -33,9 +33,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Install dependencies  
-        run: dotnet restore   
+        run: dotnet restore TestAspNetCore/TestAspNetCore.sln 
       - name: Build  
-        run: dotnet build --configuration Release --no-restore  
+        run: dotnet build TestAspNetCore/TestAspNetCore.sln --configuration Release --no-restore  
       
       # Publish to Nuget
         
