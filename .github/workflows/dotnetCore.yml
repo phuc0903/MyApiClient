@@ -33,11 +33,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Install dependencies  
-        run: dotnet restore  
-        working-directory: ./MyApiClient 
+        run: dotnet restore   
       - name: Build  
         run: dotnet build --configuration Release --no-restore  
-        working-directory: ./MyApiClient 
       
       # Publish to Nuget
         
